@@ -12,6 +12,7 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		A1D4A0DF0F79D311008F1EE8 /* yamdi in Copy Bundle Executables */ = {isa = PBXBuildFile; fileRef = A1D4A0DE0F79D311008F1EE8 /* yamdi */; };
+		A1D4A0EC0F79D556008F1EE8 /* GTMScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,10 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* FLVrInjectr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLVrInjectr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D4A0DE0F79D311008F1EE8 /* yamdi */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = yamdi; path = Resources/yamdi; sourceTree = "<group>"; };
+		A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMScriptRunner.h; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.h"; sourceTree = "<group>"; };
+		A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunner.m; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.m"; sourceTree = "<group>"; };
+		A1D4A0EB0F79D556008F1EE8 /* GTMScriptRunnerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunnerTest.m; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunnerTest.m"; sourceTree = "<group>"; };
+		A1D4A0F00F79D592008F1EE8 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "google-toolbox-for-mac-1-5-1/GTMDefines.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
+				A1D4A0E40F79D4F0008F1EE8 /* GTM */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -126,6 +132,17 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1D4A0E40F79D4F0008F1EE8 /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				A1D4A0F00F79D592008F1EE8 /* GTMDefines.h */,
+				A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */,
+				A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */,
+				A1D4A0EB0F79D556008F1EE8 /* GTMScriptRunnerTest.m */,
+			);
+			name = GTM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				A1D4A0EC0F79D556008F1EE8 /* GTMScriptRunner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
