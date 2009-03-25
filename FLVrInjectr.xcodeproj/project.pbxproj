@@ -13,7 +13,23 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		A1D4A0DF0F79D311008F1EE8 /* yamdi in Copy Bundle Executables */ = {isa = PBXBuildFile; fileRef = A1D4A0DE0F79D311008F1EE8 /* yamdi */; };
 		A1D4A0EC0F79D556008F1EE8 /* GTMScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */; };
+		A1D4A1000F79D6A0008F1EE8 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */; };
+		A1D4A1020F79D6AC008F1EE8 /* GTMScriptRunnerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0EB0F79D556008F1EE8 /* GTMScriptRunnerTest.m */; };
+		A1D4A10C0F79D74B008F1EE8 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A10A0F79D74B008F1EE8 /* GTMRegex.m */; };
+		A1D4A10E0F79D752008F1EE8 /* GTMRegexTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A10B0F79D74B008F1EE8 /* GTMRegexTest.m */; };
+		A1D4A1BD0F79DBA3008F1EE8 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A1060F79D6F3008F1EE8 /* GTMUnitTestDevLog.m */; };
+		A1D4A1C00F79DC1F008F1EE8 /* GTMDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1D4A1110F79D7D1008F1EE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* FLVrInjectr */;
+			remoteInfo = FLVrInjectr;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A1D4A0E30F79D350008F1EE8 /* Copy Bundle Executables */ = {
@@ -45,6 +61,16 @@
 		A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunner.m; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.m"; sourceTree = "<group>"; };
 		A1D4A0EB0F79D556008F1EE8 /* GTMScriptRunnerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunnerTest.m; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunnerTest.m"; sourceTree = "<group>"; };
 		A1D4A0F00F79D592008F1EE8 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "google-toolbox-for-mac-1-5-1/GTMDefines.h"; sourceTree = "<group>"; };
+		A1D4A0F90F79D649008F1EE8 /* FLVrInjectr Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FLVrInjectr Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D4A0FA0F79D649008F1EE8 /* FLVrInjectr Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FLVrInjectr Unit Tests-Info.plist"; sourceTree = "<group>"; };
+		A1D4A0FE0F79D69F008F1EE8 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.h"; sourceTree = "<group>"; };
+		A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.m"; sourceTree = "<group>"; };
+		A1D4A1050F79D6F3008F1EE8 /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = "google-toolbox-for-mac-1-5-1/UnitTesting/GTMUnitTestDevLog.h"; sourceTree = "<group>"; };
+		A1D4A1060F79D6F3008F1EE8 /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = "google-toolbox-for-mac-1-5-1/UnitTesting/GTMUnitTestDevLog.m"; sourceTree = "<group>"; };
+		A1D4A1090F79D74B008F1EE8 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMRegex.h"; sourceTree = "<group>"; };
+		A1D4A10A0F79D74B008F1EE8 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMRegex.m"; sourceTree = "<group>"; };
+		A1D4A10B0F79D74B008F1EE8 /* GTMRegexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegexTest.m; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMRegexTest.m"; sourceTree = "<group>"; };
+		A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMDevLog.m; path = "google-toolbox-for-mac-1-5-1/DebugUtils/GTMDevLog.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +79,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D4A0F60F79D649008F1EE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* FLVrInjectr.app */,
+				A1D4A0F90F79D649008F1EE8 /* FLVrInjectr Unit Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +135,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				A1D4A0FA0F79D649008F1EE8 /* FLVrInjectr Unit Tests-Info.plist */,
 			);
 			name = FLVrInjectr;
 			sourceTree = "<group>";
@@ -138,11 +173,43 @@
 			isa = PBXGroup;
 			children = (
 				A1D4A0F00F79D592008F1EE8 /* GTMDefines.h */,
+				A1D4A1A50F79DA67008F1EE8 /* DebugUtils */,
+				A1D4A1A40F79DA5A008F1EE8 /* Foundation */,
+				A1D4A1A60F79DA74008F1EE8 /* UnitTesting */,
+			);
+			name = GTM;
+			sourceTree = "<group>";
+		};
+		A1D4A1A40F79DA5A008F1EE8 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A1D4A1090F79D74B008F1EE8 /* GTMRegex.h */,
+				A1D4A10A0F79D74B008F1EE8 /* GTMRegex.m */,
+				A1D4A10B0F79D74B008F1EE8 /* GTMRegexTest.m */,
 				A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */,
 				A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */,
 				A1D4A0EB0F79D556008F1EE8 /* GTMScriptRunnerTest.m */,
 			);
-			name = GTM;
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		A1D4A1A50F79DA67008F1EE8 /* DebugUtils */ = {
+			isa = PBXGroup;
+			children = (
+				A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */,
+			);
+			name = DebugUtils;
+			sourceTree = "<group>";
+		};
+		A1D4A1A60F79DA74008F1EE8 /* UnitTesting */ = {
+			isa = PBXGroup;
+			children = (
+				A1D4A0FE0F79D69F008F1EE8 /* GTMSenTestCase.h */,
+				A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */,
+				A1D4A1050F79D6F3008F1EE8 /* GTMUnitTestDevLog.h */,
+				A1D4A1060F79D6F3008F1EE8 /* GTMUnitTestDevLog.m */,
+			);
+			name = UnitTesting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +234,25 @@
 			productReference = 8D1107320486CEB800E47090 /* FLVrInjectr.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A1D4A0F80F79D649008F1EE8 /* FLVrInjectr Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1D4A0FD0F79D64E008F1EE8 /* Build configuration list for PBXNativeTarget "FLVrInjectr Unit Tests" */;
+			buildPhases = (
+				A1D4A0F40F79D649008F1EE8 /* Resources */,
+				A1D4A0F50F79D649008F1EE8 /* Sources */,
+				A1D4A0F60F79D649008F1EE8 /* Frameworks */,
+				A1D4A0F70F79D649008F1EE8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1D4A1120F79D7D1008F1EE8 /* PBXTargetDependency */,
+			);
+			name = "FLVrInjectr Unit Tests";
+			productName = "FLVrInjectr Unit Tests";
+			productReference = A1D4A0F90F79D649008F1EE8 /* FLVrInjectr Unit Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +266,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* FLVrInjectr */,
+				A1D4A0F80F79D649008F1EE8 /* FLVrInjectr Unit Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -194,7 +281,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1D4A0F40F79D649008F1EE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1D4A0F70F79D649008F1EE8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -203,10 +313,31 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				A1D4A0EC0F79D556008F1EE8 /* GTMScriptRunner.m in Sources */,
+				A1D4A10C0F79D74B008F1EE8 /* GTMRegex.m in Sources */,
+				A1D4A1C00F79DC1F008F1EE8 /* GTMDevLog.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D4A0F50F79D649008F1EE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D4A1000F79D6A0008F1EE8 /* GTMSenTestCase.m in Sources */,
+				A1D4A1020F79D6AC008F1EE8 /* GTMScriptRunnerTest.m in Sources */,
+				A1D4A10E0F79D752008F1EE8 /* GTMRegexTest.m in Sources */,
+				A1D4A1BD0F79DBA3008F1EE8 /* GTMUnitTestDevLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1D4A1120F79D7D1008F1EE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* FLVrInjectr */;
+			targetProxy = A1D4A1110F79D7D1008F1EE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -228,6 +359,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A1D4A0FB0F79D64D008F1EE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "FLVrInjectr Unit Tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "FLVrInjectr Unit Tests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLVrInjectr.app/Contents/MacOS/FLVrInjectr";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A1D4A0FC0F79D64D008F1EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "FLVrInjectr Unit Tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "FLVrInjectr Unit Tests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLVrInjectr.app/Contents/MacOS/FLVrInjectr";
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -288,6 +477,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A1D4A0FD0F79D64E008F1EE8 /* Build configuration list for PBXNativeTarget "FLVrInjectr Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1D4A0FB0F79D64D008F1EE8 /* Debug */,
+				A1D4A0FC0F79D64D008F1EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "FLVrInjectr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
