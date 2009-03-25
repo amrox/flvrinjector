@@ -19,6 +19,7 @@
 		A1D4A10E0F79D752008F1EE8 /* GTMRegexTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A10B0F79D74B008F1EE8 /* GTMRegexTest.m */; };
 		A1D4A1BD0F79DBA3008F1EE8 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A1060F79D6F3008F1EE8 /* GTMUnitTestDevLog.m */; };
 		A1D4A1C00F79DC1F008F1EE8 /* GTMDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */; };
+		A1D4A2030F79E02C008F1EE8 /* taste_the_fame.flv in Resources */ = {isa = PBXBuildFile; fileRef = A1D4A2020F79E02C008F1EE8 /* taste_the_fame.flv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		A1D4A10A0F79D74B008F1EE8 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMRegex.m"; sourceTree = "<group>"; };
 		A1D4A10B0F79D74B008F1EE8 /* GTMRegexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegexTest.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMRegexTest.m"; sourceTree = "<group>"; };
 		A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMDevLog.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/DebugUtils/GTMDevLog.m"; sourceTree = "<group>"; };
+		A1D4A2020F79E02C008F1EE8 /* taste_the_fame.flv */ = {isa = PBXFileReference; lastKnownFileType = file; name = taste_the_fame.flv; path = "Sample Data/taste_the_fame.flv"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		29B97314FDCFA39411CA2CEA /* FLVrInjectr */ = {
 			isa = PBXGroup;
 			children = (
+				A1D4A2000F79E014008F1EE8 /* Tests */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				A1D4A0E40F79D4F0008F1EE8 /* GTM */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -212,6 +215,22 @@
 			name = UnitTesting;
 			sourceTree = "<group>";
 		};
+		A1D4A2000F79E014008F1EE8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A1D4A2010F79E01D008F1EE8 /* Test Data */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		A1D4A2010F79E01D008F1EE8 /* Test Data */ = {
+			isa = PBXGroup;
+			children = (
+				A1D4A2020F79E02C008F1EE8 /* taste_the_fame.flv */,
+			);
+			name = "Test Data";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D4A2030F79E02C008F1EE8 /* taste_the_fame.flv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
