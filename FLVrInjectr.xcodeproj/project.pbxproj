@@ -26,7 +26,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* FLVrInjectr */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = FLVrInjectr;
 		};
 /* End PBXContainerItemProxy section */
@@ -57,20 +57,20 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* FLVrInjectr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLVrInjectr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D4A0DE0F79D311008F1EE8 /* yamdi */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = yamdi; path = Resources/yamdi; sourceTree = "<group>"; };
-		A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMScriptRunner.h; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.h"; sourceTree = "<group>"; };
-		A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunner.m; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.m"; sourceTree = "<group>"; };
-		A1D4A0EB0F79D556008F1EE8 /* GTMScriptRunnerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunnerTest.m; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunnerTest.m"; sourceTree = "<group>"; };
-		A1D4A0F00F79D592008F1EE8 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "google-toolbox-for-mac-1-5-1/GTMDefines.h"; sourceTree = "<group>"; };
+		A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMScriptRunner.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.h"; sourceTree = "<group>"; };
+		A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunner.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.m"; sourceTree = "<group>"; };
+		A1D4A0EB0F79D556008F1EE8 /* GTMScriptRunnerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunnerTest.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunnerTest.m"; sourceTree = "<group>"; };
+		A1D4A0F00F79D592008F1EE8 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/GTMDefines.h"; sourceTree = "<group>"; };
 		A1D4A0F90F79D649008F1EE8 /* FLVrInjectr Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FLVrInjectr Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D4A0FA0F79D649008F1EE8 /* FLVrInjectr Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FLVrInjectr Unit Tests-Info.plist"; sourceTree = "<group>"; };
-		A1D4A0FE0F79D69F008F1EE8 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.h"; sourceTree = "<group>"; };
-		A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.m"; sourceTree = "<group>"; };
-		A1D4A1050F79D6F3008F1EE8 /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = "google-toolbox-for-mac-1-5-1/UnitTesting/GTMUnitTestDevLog.h"; sourceTree = "<group>"; };
-		A1D4A1060F79D6F3008F1EE8 /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = "google-toolbox-for-mac-1-5-1/UnitTesting/GTMUnitTestDevLog.m"; sourceTree = "<group>"; };
-		A1D4A1090F79D74B008F1EE8 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMRegex.h"; sourceTree = "<group>"; };
-		A1D4A10A0F79D74B008F1EE8 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMRegex.m"; sourceTree = "<group>"; };
-		A1D4A10B0F79D74B008F1EE8 /* GTMRegexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegexTest.m; path = "google-toolbox-for-mac-1-5-1/Foundation/GTMRegexTest.m"; sourceTree = "<group>"; };
-		A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMDevLog.m; path = "google-toolbox-for-mac-1-5-1/DebugUtils/GTMDevLog.m"; sourceTree = "<group>"; };
+		A1D4A0FE0F79D69F008F1EE8 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.h"; sourceTree = "<group>"; };
+		A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.m"; sourceTree = "<group>"; };
+		A1D4A1050F79D6F3008F1EE8 /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMUnitTestDevLog.h"; sourceTree = "<group>"; };
+		A1D4A1060F79D6F3008F1EE8 /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMUnitTestDevLog.m"; sourceTree = "<group>"; };
+		A1D4A1090F79D74B008F1EE8 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMRegex.h"; sourceTree = "<group>"; };
+		A1D4A10A0F79D74B008F1EE8 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMRegex.m"; sourceTree = "<group>"; };
+		A1D4A10B0F79D74B008F1EE8 /* GTMRegexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegexTest.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMRegexTest.m"; sourceTree = "<group>"; };
+		A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMDevLog.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/DebugUtils/GTMDevLog.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
