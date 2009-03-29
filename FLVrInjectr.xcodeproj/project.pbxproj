@@ -11,6 +11,8 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A154FB9F0F7F38A4002BDE49 /* LTKeyPressTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */; };
+		A154FBC60F7F3C25002BDE49 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = A154FBC50F7F3C25002BDE49 /* AppDefaults.plist */; };
 		A1D4A0DF0F79D311008F1EE8 /* yamdi in Copy Bundle Executables */ = {isa = PBXBuildFile; fileRef = A1D4A0DE0F79D311008F1EE8 /* yamdi */; };
 		A1D4A0EC0F79D556008F1EE8 /* GTMScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */; };
 		A1D4A1000F79D6A0008F1EE8 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */; };
@@ -20,6 +22,9 @@
 		A1D4A1BD0F79DBA3008F1EE8 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A1060F79D6F3008F1EE8 /* GTMUnitTestDevLog.m */; };
 		A1D4A1C00F79DC1F008F1EE8 /* GTMDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */; };
 		A1D4A2030F79E02C008F1EE8 /* taste_the_fame.flv in Resources */ = {isa = PBXBuildFile; fileRef = A1D4A2020F79E02C008F1EE8 /* taste_the_fame.flv */; };
+		A1D4A22C0F7B2B1A008F1EE8 /* YamdiRunner_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A22B0F7B2B1A008F1EE8 /* YamdiRunner_Test.m */; };
+		A1D4A2800F7B3157008F1EE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A20C0F79E0CE008F1EE8 /* AppDelegate.m */; };
+		A1D4A2CF0F7B3845008F1EE8 /* YamdiRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A2070F79E0BD008F1EE8 /* YamdiRunner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,9 @@
 		32CA4F630368D1EE00C91783 /* FLVrInjectr_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVrInjectr_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* FLVrInjectr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLVrInjectr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A154FB9D0F7F38A4002BDE49 /* LTKeyPressTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTKeyPressTableView.h; path = Sources/3rdParty/LTKeyPressTableView/LTKeyPressTableView.h; sourceTree = "<group>"; };
+		A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTKeyPressTableView.m; path = Sources/3rdParty/LTKeyPressTableView/LTKeyPressTableView.m; sourceTree = "<group>"; };
+		A154FBC50F7F3C25002BDE49 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppDefaults.plist; sourceTree = "<group>"; };
 		A1D4A0DE0F79D311008F1EE8 /* yamdi */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = yamdi; path = Resources/yamdi; sourceTree = "<group>"; };
 		A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMScriptRunner.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.h"; sourceTree = "<group>"; };
 		A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunner.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.m"; sourceTree = "<group>"; };
@@ -73,6 +81,12 @@
 		A1D4A10B0F79D74B008F1EE8 /* GTMRegexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegexTest.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMRegexTest.m"; sourceTree = "<group>"; };
 		A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMDevLog.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/DebugUtils/GTMDevLog.m"; sourceTree = "<group>"; };
 		A1D4A2020F79E02C008F1EE8 /* taste_the_fame.flv */ = {isa = PBXFileReference; lastKnownFileType = file; name = taste_the_fame.flv; path = "Sample Data/taste_the_fame.flv"; sourceTree = "<group>"; };
+		A1D4A2060F79E0BD008F1EE8 /* YamdiRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamdiRunner.h; sourceTree = "<group>"; };
+		A1D4A2070F79E0BD008F1EE8 /* YamdiRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamdiRunner.m; sourceTree = "<group>"; };
+		A1D4A20B0F79E0CE008F1EE8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1D4A20C0F79E0CE008F1EE8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1D4A22A0F7B2B1A008F1EE8 /* YamdiRunner_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamdiRunner_Test.h; sourceTree = "<group>"; };
+		A1D4A22B0F7B2B1A008F1EE8 /* YamdiRunner_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamdiRunner_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A1D4A20B0F79E0CE008F1EE8 /* AppDelegate.h */,
+				A1D4A20C0F79E0CE008F1EE8 /* AppDelegate.m */,
+				A1D4A2060F79E0BD008F1EE8 /* YamdiRunner.h */,
+				A1D4A2070F79E0BD008F1EE8 /* YamdiRunner.m */,
+				A154FB9D0F7F38A4002BDE49 /* LTKeyPressTableView.h */,
+				A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -131,10 +151,10 @@
 		29B97314FDCFA39411CA2CEA /* FLVrInjectr */ = {
 			isa = PBXGroup;
 			children = (
-				A1D4A2000F79E014008F1EE8 /* Tests */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				A1D4A0E40F79D4F0008F1EE8 /* GTM */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				A1D4A2000F79E014008F1EE8 /* Tests */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -155,6 +175,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A154FBC50F7F3C25002BDE49 /* AppDefaults.plist */,
 				A1D4A0DE0F79D311008F1EE8 /* yamdi */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -219,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				A1D4A2010F79E01D008F1EE8 /* Test Data */,
+				A1D4A22A0F7B2B1A008F1EE8 /* YamdiRunner_Test.h */,
+				A1D4A22B0F7B2B1A008F1EE8 /* YamdiRunner_Test.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -297,6 +320,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				A154FBC60F7F3C25002BDE49 /* AppDefaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +359,9 @@
 				A1D4A0EC0F79D556008F1EE8 /* GTMScriptRunner.m in Sources */,
 				A1D4A10C0F79D74B008F1EE8 /* GTMRegex.m in Sources */,
 				A1D4A1C00F79DC1F008F1EE8 /* GTMDevLog.m in Sources */,
+				A1D4A2800F7B3157008F1EE8 /* AppDelegate.m in Sources */,
+				A1D4A2CF0F7B3845008F1EE8 /* YamdiRunner.m in Sources */,
+				A154FB9F0F7F38A4002BDE49 /* LTKeyPressTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +373,7 @@
 				A1D4A1020F79D6AC008F1EE8 /* GTMScriptRunnerTest.m in Sources */,
 				A1D4A10E0F79D752008F1EE8 /* GTMRegexTest.m in Sources */,
 				A1D4A1BD0F79DBA3008F1EE8 /* GTMUnitTestDevLog.m in Sources */,
+				A1D4A22C0F7B2B1A008F1EE8 /* YamdiRunner_Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
