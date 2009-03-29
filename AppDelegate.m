@@ -90,19 +90,22 @@
 }
 
 
-- (IBAction) go:(id)sender
+- (IBAction) inject:(id)sender
 {
 	NSError* error = nil;
 	YamdiRunner* runner = [[YamdiRunner alloc] init];
+	NSString* suffix = [[NSUserDefaults standardUserDefaults] stringForKey:@"outputFileSuffix"];
 	
 	for( NSString* f in flvPathsController.arrangedObjects )
 	{
-		NSString* outputPath = [[f stringByDeletingPathExtension] stringByAppendingString:@"-tagged.flv"];
+		NSString* outputPath = [[f stringByDeletingPathExtension] stringByAppendingString:
+								[NSString stringWithFormat:@"-%@.flv", suffix]];
 		NSLog( @"doing %@", f );
 		
 		NSString* xmlPath = nil;
 		if( self.shouldOutputXML )
-			xmlPath = [[f stringByDeletingPathExtension] stringByAppendingString:@"-tagged.xml"];
+			xmlPath = [[f stringByDeletingPathExtension] stringByAppendingString:
+					   [NSString stringWithFormat:@"-%@.xml", suffix]];
 		
 		runner.inputPath = f;
 		runner.outputPath = outputPath;
@@ -116,6 +119,12 @@
 		if( error )
 			NSLog( @"error: %@", error );
 	}
+}
+
+
+- (IBAction) showPreferencesWindow:(id)sender
+{
+	[preferencesController showWindow:self];
 }
 
 

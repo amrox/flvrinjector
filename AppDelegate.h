@@ -8,12 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class PreferencesController;
 
 @interface AppDelegate : NSWindowController
 {
 	IBOutlet NSArrayController* flvPathsController;
 	IBOutlet NSMatrix* saveOptionMatrix;
 	IBOutlet NSTableView* filesTableView;
+
+	IBOutlet PreferencesController* preferencesController;
 	
 //	BOOL _shouldUseCreatorTag;
 //	NSString* _creatorTag;
@@ -32,6 +35,10 @@
 
 - (IBAction) openFLVFiles:(id)sender;
 
-- (IBAction) go:(id)sender;
+- (IBAction) inject:(id)sender;
+
+- (IBAction) showPreferencesWindow:(id)sender;
+
+
 
 @end

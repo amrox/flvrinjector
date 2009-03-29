@@ -10,5 +10,7 @@
 	<string></string>
 	<key>shouldOutputXML</key>
 	<false/>
+	<key>outputFileSuffix</key>
+	<string>tagged</string>
 </dict>
 </plist>

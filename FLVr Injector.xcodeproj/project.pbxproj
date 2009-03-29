@@ -13,6 +13,7 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		A154FB9F0F7F38A4002BDE49 /* LTKeyPressTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */; };
 		A154FBC60F7F3C25002BDE49 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = A154FBC50F7F3C25002BDE49 /* AppDefaults.plist */; };
+		A154FC990F7FBC4F002BDE49 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = A154FC980F7FBC4F002BDE49 /* PreferencesController.m */; };
 		A1D4A0DF0F79D311008F1EE8 /* yamdi in Copy Bundle Executables */ = {isa = PBXBuildFile; fileRef = A1D4A0DE0F79D311008F1EE8 /* yamdi */; };
 		A1D4A0EC0F79D556008F1EE8 /* GTMScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */; };
 		A1D4A1000F79D6A0008F1EE8 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */; };
@@ -59,19 +60,21 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		32CA4F630368D1EE00C91783 /* FLVrInjectr_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVrInjectr_Prefix.pch; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* FLVr Injector_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLVr Injector_Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* FLVrInjectr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLVrInjectr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* FLVr Injector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FLVr Injector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A154FB9D0F7F38A4002BDE49 /* LTKeyPressTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTKeyPressTableView.h; path = Sources/3rdParty/LTKeyPressTableView/LTKeyPressTableView.h; sourceTree = "<group>"; };
 		A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTKeyPressTableView.m; path = Sources/3rdParty/LTKeyPressTableView/LTKeyPressTableView.m; sourceTree = "<group>"; };
 		A154FBC50F7F3C25002BDE49 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppDefaults.plist; sourceTree = "<group>"; };
+		A154FC970F7FBC4F002BDE49 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		A154FC980F7FBC4F002BDE49 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		A1D4A0DE0F79D311008F1EE8 /* yamdi */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = yamdi; path = Resources/yamdi; sourceTree = "<group>"; };
 		A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMScriptRunner.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.h"; sourceTree = "<group>"; };
 		A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunner.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.m"; sourceTree = "<group>"; };
 		A1D4A0EB0F79D556008F1EE8 /* GTMScriptRunnerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunnerTest.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunnerTest.m"; sourceTree = "<group>"; };
 		A1D4A0F00F79D592008F1EE8 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/GTMDefines.h"; sourceTree = "<group>"; };
-		A1D4A0F90F79D649008F1EE8 /* FLVrInjectr Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FLVrInjectr Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1D4A0FA0F79D649008F1EE8 /* FLVrInjectr Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FLVrInjectr Unit Tests-Info.plist"; sourceTree = "<group>"; };
+		A1D4A0F90F79D649008F1EE8 /* FLVr Injector Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FLVr Injector Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D4A0FA0F79D649008F1EE8 /* FLVr Injector Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FLVr Injector Unit Tests-Info.plist"; sourceTree = "<group>"; };
 		A1D4A0FE0F79D69F008F1EE8 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.h"; sourceTree = "<group>"; };
 		A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.m"; sourceTree = "<group>"; };
 		A1D4A1050F79D6F3008F1EE8 /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMUnitTestDevLog.h"; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				A1D4A2070F79E0BD008F1EE8 /* YamdiRunner.m */,
 				A154FB9D0F7F38A4002BDE49 /* LTKeyPressTableView.h */,
 				A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */,
+				A154FC970F7FBC4F002BDE49 /* PreferencesController.h */,
+				A154FC980F7FBC4F002BDE49 /* PreferencesController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -142,8 +147,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* FLVrInjectr.app */,
-				A1D4A0F90F79D649008F1EE8 /* FLVrInjectr Unit Tests.octest */,
+				8D1107320486CEB800E47090 /* FLVr Injector.app */,
+				A1D4A0F90F79D649008F1EE8 /* FLVr Injector Unit Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,7 +163,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				A1D4A0FA0F79D649008F1EE8 /* FLVrInjectr Unit Tests-Info.plist */,
 			);
 			name = FLVrInjectr;
 			sourceTree = "<group>";
@@ -166,7 +170,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* FLVrInjectr_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* FLVr Injector_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -175,6 +179,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A1D4A0FA0F79D649008F1EE8 /* FLVr Injector Unit Tests-Info.plist */,
 				A154FBC50F7F3C25002BDE49 /* AppDefaults.plist */,
 				A1D4A0DE0F79D311008F1EE8 /* yamdi */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -257,9 +262,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* FLVrInjectr */ = {
+		8D1107260486CEB800E47090 /* FLVr Injector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "FLVrInjectr" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "FLVr Injector" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				A1D4A0E30F79D350008F1EE8 /* Copy Bundle Executables */,
@@ -270,15 +275,15 @@
 			);
 			dependencies = (
 			);
-			name = FLVrInjectr;
+			name = "FLVr Injector";
 			productInstallPath = "$(HOME)/Applications";
 			productName = FLVrInjectr;
-			productReference = 8D1107320486CEB800E47090 /* FLVrInjectr.app */;
+			productReference = 8D1107320486CEB800E47090 /* FLVr Injector.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A1D4A0F80F79D649008F1EE8 /* FLVrInjectr Unit Tests */ = {
+		A1D4A0F80F79D649008F1EE8 /* FLVr Injector Unit Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1D4A0FD0F79D64E008F1EE8 /* Build configuration list for PBXNativeTarget "FLVrInjectr Unit Tests" */;
+			buildConfigurationList = A1D4A0FD0F79D64E008F1EE8 /* Build configuration list for PBXNativeTarget "FLVr Injector Unit Tests" */;
 			buildPhases = (
 				A1D4A0F40F79D649008F1EE8 /* Resources */,
 				A1D4A0F50F79D649008F1EE8 /* Sources */,
@@ -290,9 +295,9 @@
 			dependencies = (
 				A1D4A1120F79D7D1008F1EE8 /* PBXTargetDependency */,
 			);
-			name = "FLVrInjectr Unit Tests";
+			name = "FLVr Injector Unit Tests";
 			productName = "FLVrInjectr Unit Tests";
-			productReference = A1D4A0F90F79D649008F1EE8 /* FLVrInjectr Unit Tests.octest */;
+			productReference = A1D4A0F90F79D649008F1EE8 /* FLVr Injector Unit Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -300,15 +305,15 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FLVrInjectr" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FLVr Injector" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* FLVrInjectr */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* FLVrInjectr */,
-				A1D4A0F80F79D649008F1EE8 /* FLVrInjectr Unit Tests */,
+				8D1107260486CEB800E47090 /* FLVr Injector */,
+				A1D4A0F80F79D649008F1EE8 /* FLVr Injector Unit Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -362,6 +367,7 @@
 				A1D4A2800F7B3157008F1EE8 /* AppDelegate.m in Sources */,
 				A1D4A2CF0F7B3845008F1EE8 /* YamdiRunner.m in Sources */,
 				A154FB9F0F7F38A4002BDE49 /* LTKeyPressTableView.m in Sources */,
+				A154FC990F7FBC4F002BDE49 /* PreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +388,7 @@
 /* Begin PBXTargetDependency section */
 		A1D4A1120F79D7D1008F1EE8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8D1107260486CEB800E47090 /* FLVrInjectr */;
+			target = 8D1107260486CEB800E47090 /* FLVr Injector */;
 			targetProxy = A1D4A1110F79D7D1008F1EE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -421,7 +427,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "FLVrInjectr Unit Tests-Info.plist";
+				INFOPLIST_FILE = "FLVr Injector Unit Tests-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -430,7 +436,7 @@
 					SenTestingKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = "FLVrInjectr Unit Tests";
+				PRODUCT_NAME = "FLVr Injector Unit Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLVrInjectr.app/Contents/MacOS/FLVrInjectr";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -449,7 +455,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "FLVrInjectr Unit Tests-Info.plist";
+				INFOPLIST_FILE = "FLVr Injector Unit Tests-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -458,7 +464,7 @@
 					SenTestingKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = "FLVrInjectr Unit Tests";
+				PRODUCT_NAME = "FLVr Injector Unit Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLVrInjectr.app/Contents/MacOS/FLVrInjectr";
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
@@ -475,10 +481,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = FLVrInjectr_Prefix.pch;
+				GCC_PREFIX_HEADER = "FLVr Injector_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = FLVrInjectr;
+				PRODUCT_NAME = "FLVr Injector";
 			};
 			name = Debug;
 		};
@@ -489,10 +495,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = FLVrInjectr_Prefix.pch;
+				GCC_PREFIX_HEADER = "FLVr Injector_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = FLVrInjectr;
+				PRODUCT_NAME = "FLVr Injector";
 			};
 			name = Release;
 		};
@@ -525,7 +531,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1D4A0FD0F79D64E008F1EE8 /* Build configuration list for PBXNativeTarget "FLVrInjectr Unit Tests" */ = {
+		A1D4A0FD0F79D64E008F1EE8 /* Build configuration list for PBXNativeTarget "FLVr Injector Unit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1D4A0FB0F79D64D008F1EE8 /* Debug */,
@@ -534,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "FLVrInjectr" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "FLVr Injector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -543,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FLVrInjectr" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FLVr Injector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
