@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>outputMode</key>
+	<integer>0</integer>
+	<key>outputLocationMenuItemIndex</key>
+	<integer>0</integer>
 	<key>shouldAddOnLastSecondEvent</key>
 	<false/>
 	<key>shouldUseCreatorTag</key>
@@ -12,5 +16,11 @@
 	<false/>
 	<key>outputFileSuffix</key>
 	<string>tagged</string>
+	<key>recentSaveLocationsMax</key>
+	<integer>3</integer>
+	<key>recentSaveLocations</key>
+	<array>
+		<string>~/Desktop</string>
+	</array>
 </dict>
 </plist>

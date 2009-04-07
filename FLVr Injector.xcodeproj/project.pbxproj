@@ -14,6 +14,8 @@
 		A154FB9F0F7F38A4002BDE49 /* LTKeyPressTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */; };
 		A154FBC60F7F3C25002BDE49 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = A154FBC50F7F3C25002BDE49 /* AppDefaults.plist */; };
 		A154FC990F7FBC4F002BDE49 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = A154FC980F7FBC4F002BDE49 /* PreferencesController.m */; };
+		A154FCFD0F845F06002BDE49 /* NSString+AMXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A154FCFC0F845F06002BDE49 /* NSString+AMXExtensions.m */; };
+		A154FD020F845FFF002BDE49 /* NSString+AMXExtensions_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A154FD010F845FFF002BDE49 /* NSString+AMXExtensions_Test.m */; };
 		A1D4A0DF0F79D311008F1EE8 /* yamdi in Copy Bundle Executables */ = {isa = PBXBuildFile; fileRef = A1D4A0DE0F79D311008F1EE8 /* yamdi */; };
 		A1D4A0EC0F79D556008F1EE8 /* GTMScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */; };
 		A1D4A1000F79D6A0008F1EE8 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */; };
@@ -68,6 +70,10 @@
 		A154FBC50F7F3C25002BDE49 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppDefaults.plist; sourceTree = "<group>"; };
 		A154FC970F7FBC4F002BDE49 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		A154FC980F7FBC4F002BDE49 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		A154FCFB0F845F06002BDE49 /* NSString+AMXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AMXExtensions.h"; sourceTree = "<group>"; };
+		A154FCFC0F845F06002BDE49 /* NSString+AMXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AMXExtensions.m"; sourceTree = "<group>"; };
+		A154FD000F845FFF002BDE49 /* NSString+AMXExtensions_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AMXExtensions_Test.h"; sourceTree = "<group>"; };
+		A154FD010F845FFF002BDE49 /* NSString+AMXExtensions_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AMXExtensions_Test.m"; sourceTree = "<group>"; };
 		A1D4A0DE0F79D311008F1EE8 /* yamdi */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = yamdi; path = Resources/yamdi; sourceTree = "<group>"; };
 		A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMScriptRunner.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.h"; sourceTree = "<group>"; };
 		A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunner.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.m"; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
+				A154FCF80F845E69002BDE49 /* Categories */,
 				A1D4A0E40F79D4F0008F1EE8 /* GTM */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				A1D4A2000F79E014008F1EE8 /* Tests */,
@@ -196,6 +203,15 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A154FCF80F845E69002BDE49 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A154FCFB0F845F06002BDE49 /* NSString+AMXExtensions.h */,
+				A154FCFC0F845F06002BDE49 /* NSString+AMXExtensions.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		A1D4A0E40F79D4F0008F1EE8 /* GTM */ = {
@@ -247,6 +263,8 @@
 				A1D4A2010F79E01D008F1EE8 /* Test Data */,
 				A1D4A22A0F7B2B1A008F1EE8 /* YamdiRunner_Test.h */,
 				A1D4A22B0F7B2B1A008F1EE8 /* YamdiRunner_Test.m */,
+				A154FD000F845FFF002BDE49 /* NSString+AMXExtensions_Test.h */,
+				A154FD010F845FFF002BDE49 /* NSString+AMXExtensions_Test.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -368,6 +386,7 @@
 				A1D4A2CF0F7B3845008F1EE8 /* YamdiRunner.m in Sources */,
 				A154FB9F0F7F38A4002BDE49 /* LTKeyPressTableView.m in Sources */,
 				A154FC990F7FBC4F002BDE49 /* PreferencesController.m in Sources */,
+				A154FCFD0F845F06002BDE49 /* NSString+AMXExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +399,7 @@
 				A1D4A10E0F79D752008F1EE8 /* GTMRegexTest.m in Sources */,
 				A1D4A1BD0F79DBA3008F1EE8 /* GTMUnitTestDevLog.m in Sources */,
 				A1D4A22C0F7B2B1A008F1EE8 /* YamdiRunner_Test.m in Sources */,
+				A154FD020F845FFF002BDE49 /* NSString+AMXExtensions_Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +457,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "FLVr Injector Unit Tests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLVrInjectr.app/Contents/MacOS/FLVrInjectr";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLVr Injector.app/Contents/MacOS/FLVr Injector";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -465,7 +485,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "FLVr Injector Unit Tests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLVrInjectr.app/Contents/MacOS/FLVrInjectr";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLVr Injector.app/Contents/MacOS/FLVr Injector";
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
 			};

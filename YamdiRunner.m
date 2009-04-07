@@ -34,7 +34,7 @@ NSString *yamdiPath = nil;
 	if( self.inputPath )
 	{
 		[args addObject:@"-i"];
-		[args addObject:self.inputPath];
+		[args addObject:[self.inputPath stringByStandardizingPath]]; 
 	}
 	else
 	{
@@ -45,7 +45,7 @@ NSString *yamdiPath = nil;
 	if( self.outputPath )
 	{
 		[args addObject:@"-o"];
-		[args addObject:self.outputPath];
+		[args addObject:[self.outputPath stringByStandardizingPath]];
 	}
 	else
 	{
@@ -63,7 +63,7 @@ NSString *yamdiPath = nil;
 	if( self.xmlOutputPath )
 	{
 		[args addObject:@"-x"];
-		[args addObject:self.xmlOutputPath];
+		[args addObject:[self.xmlOutputPath stringByStandardizingPath]];
 	}
 	
 	if( self.addOnLastSecondEvent )

@@ -10,13 +10,21 @@
 
 #import "YamdiRunner.h"
 
+
+const int kSaveDestinationSameAsOriginalTag = 100;
+const int kSaveDestinationChooseTag         = 101;
+
 @implementation AppDelegate
+
 
 //@synthesize shouldUseCreatorTag = _shouldUseCreatorTag;
 //@synthesize creatorTag = _creatorTag;
 //@synthesize shouldAddOnLastSecondEvent = _shouldAddOnLastSecondEvent;
 //@synthesize shouldOutputXML = _shouldOutputXML;
-@synthesize saveMode = _saveMode;
+//@synthesize outputMode = _outputMode;
+
+@synthesize recentSaveLocations = _recentSaveLocations;
+@synthesize recentSaveLocationsMax = _recentSaveLocationsMax;
 
 + (void)initialize
 {
@@ -34,8 +42,16 @@
 //	self.creatorTag = @"";
 //	self.shouldAddOnLastSecondEvent = NO;
 //	self.shouldOutputXML = NO;
-	self.saveMode = 1;
-	[saveOptionMatrix setEnabled:NO];
+//	self.outputMode = kOutputModeInPlace;  // TODO: fix
+	//[saveOptionMatrix setEnabled:NO];
+	
+}
+
+
+- (void)applicationWillTerminate:(NSNotification *)aNotification
+{
+	[[NSUserDefaults standardUserDefaults] setObject:self.recentSaveLocations
+											  forKey:@"recentSaveLocations"];
 }
 
 
@@ -53,10 +69,18 @@
 
 - (void) awakeFromNib
 {
-	//	[filesTableView setDraggingSourceOperationMask:NSDragOperationNone forLocal:YES];
-	//	[filesTableView setDraggingSourceOperationMask:NSDragOperationNone forLocal:NO];
     [filesTableView registerForDraggedTypes:
 	 [NSArray arrayWithObject:NSFilenamesPboardType]];	
+
+	// -- save location stuff
+	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+	self.recentSaveLocationsMax = [defaults integerForKey:@"recentSaveLocationsMax"];
+	self.recentSaveLocations = [NSMutableArray arrayWithCapacity:self.recentSaveLocationsMax];
+	[self.recentSaveLocations addObjectsFromArray:[defaults arrayForKey:@"recentSaveLocations"]];
+	[self rebuildChooseSaveLocationMenu];
+	
+//	NSString* lastSavePath = [defaults stringForKey:<#(NSString *)defaultName#>
+	
 }
 
 
@@ -93,32 +117,84 @@
 - (IBAction) inject:(id)sender
 {
 	NSError* error = nil;
-	YamdiRunner* runner = [[YamdiRunner alloc] init];
-	NSString* suffix = [[NSUserDefaults standardUserDefaults] stringForKey:@"outputFileSuffix"];
 	
 	for( NSString* f in flvPathsController.arrangedObjects )
 	{
-		NSString* outputPath = [[f stringByDeletingPathExtension] stringByAppendingString:
-								[NSString stringWithFormat:@"-%@.flv", suffix]];
 		NSLog( @"doing %@", f );
+
+		if( self.outputMode == kOutputModeInPlace )
+		{
+			// move the source to a temporary folder
+			NSString* newFileName = [f stringByAppendingStringToFilename:@"-original"];
+			NSString* newPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[newFileName lastPathComponent]];
+			[[NSFileManager defaultManager] removeFileAtPath:newPath handler:nil];
+			if( [[NSFileManager defaultManager] movePath:f toPath:newPath handler:nil] )
+			{
+				error = [self injectForInputFile:newPath outputFile:f];
+				if( !error )
+				{
+					// trash the originals
+					FSRef ref;
+					if( [newPath getFSRef:&ref] )
+					{
+						FSMoveObjectToTrashSync( &ref, NULL, 0 );
+					}
+					else
+					{
+						// TODO: error
+					}
+				}
+			}
+			else
+			{
+				// TODO: error
+			}
+		}
 		
-		NSString* xmlPath = nil;
-		if( self.shouldOutputXML )
-			xmlPath = [[f stringByDeletingPathExtension] stringByAppendingString:
-					   [NSString stringWithFormat:@"-%@.xml", suffix]];
-		
-		runner.inputPath = f;
-		runner.outputPath = outputPath;
-		runner.addOnLastSecondEvent = self.shouldAddOnLastSecondEvent;
-		if( self.shouldUseCreatorTag )
-			runner.creatorTag = self.creatorTag;
-		if( xmlPath )
-			runner.xmlOutputPath = xmlPath;
-		
-		error = [runner run];
-		if( error )
-			NSLog( @"error: %@", error );
+		else if( self.outputMode == kOutputModeNewFile )
+		{
+			NSString* outputFile = nil;
+			NSString* outputDir = [[chooseSaveLocationPopupButton selectedItem] representedObject];
+			if( outputDir )
+			{
+				outputFile = [outputDir stringByAppendingPathComponent:[f lastPathComponent]];
+			}
+			else  // "same location as original" mode
+			{
+				NSString* suffix = [[NSUserDefaults standardUserDefaults] stringForKey:@"outputFileSuffix"];
+				outputFile = [f stringByAppendingStringToFilename:[NSString stringWithFormat:@"-%@", suffix]];
+			}
+			error = [self injectForInputFile:f outputFile:outputFile];
+		}
 	}
+	
+	if( !error )
+	{
+		[flvPathsController removeObjects:[flvPathsController arrangedObjects]];
+	}
+}
+
+
+- (NSError *) injectForInputFile:(NSString *)inputPath outputFile:(NSString *)outputPath
+{
+	NSError *error = nil;
+	NSString* xmlPath = nil;
+	YamdiRunner* runner = [[YamdiRunner alloc] init];
+	if( self.shouldOutputXML )
+		xmlPath = [[outputPath stringByDeletingPathExtension] stringByAppendingPathExtension:@"xml"];
+	
+	runner.inputPath = inputPath;
+	runner.outputPath = outputPath;
+	runner.addOnLastSecondEvent = self.shouldAddOnLastSecondEvent;
+	if( self.shouldUseCreatorTag )
+		runner.creatorTag = self.creatorTag;
+	if( xmlPath )
+		runner.xmlOutputPath = xmlPath;
+	
+	error = [runner run];
+	if( error )
+		NSLog( @"error: %@", error );
+	return error;
 }
 
 
@@ -128,9 +204,95 @@
 }
 
 
+- (IBAction) chooseSaveLocation:(id)sender
+{
+	NSOpenPanel* panel = [NSOpenPanel openPanel];
+	[panel setCanChooseFiles:NO];
+	[panel setCanChooseDirectories:YES];
+	[panel setCanCreateDirectories:YES];
+	[panel beginSheetForDirectory:nil
+								 file:nil
+					   modalForWindow:[self window]
+						modalDelegate:self
+					   didEndSelector:@selector(chooseSaveLocationPanelDidEnd:returnCode:contextInfo:)
+						  contextInfo:NULL];
+	
+}
+
+
+- (void) chooseSaveLocationPanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo
+{
+	if( returnCode == NSOKButton )
+	{
+		[self addNewRecentPath:[sheet filename]];
+		[self rebuildChooseSaveLocationMenu];		
+		self.outputLocationMenuItemIndex = [[chooseSaveLocationPopupButton menu] indexOfItemWithRepresentedObject:
+											[[sheet filename] stringByAbbreviatingWithTildeInPath]];
+	}
+}
+
+
+- (void) rebuildChooseSaveLocationMenu
+{
+	NSMenu* chooseSaveLocationMenu = [chooseSaveLocationPopupButton menu];
+	NSMutableArray* itemsToRemove = [NSMutableArray arrayWithCapacity:self.recentSaveLocationsMax];
+	for( NSMenuItem* item in [chooseSaveLocationMenu itemArray] )
+	{
+		if( ([item tag] != kSaveDestinationSameAsOriginalTag)
+			&& ([item tag] != kSaveDestinationChooseTag)
+			&& (![item isSeparatorItem]) )
+		{
+			[itemsToRemove addObject:item];
+		}
+	}
+	
+	for( NSMenuItem* item in itemsToRemove )
+	{
+		[chooseSaveLocationMenu removeItem:item];
+	}
+
+	NSUInteger insertIndex = 2;
+	for( NSString* p in self.recentSaveLocations )
+	{
+		NSMenuItem* item = [[NSMenuItem alloc] initWithTitle:[[p stringByStandardizingPath] lastPathComponent]
+										  action:NULL
+								   keyEquivalent:@""];
+		[item setRepresentedObject:p];
+		[item setTag:insertIndex];
+		[chooseSaveLocationMenu insertItem:item atIndex:insertIndex];
+		[item release];
+		insertIndex++;
+	}
+	
+	// reset the selection
+	[chooseSaveLocationPopupButton selectItemAtIndex:self.outputLocationMenuItemIndex];
+}
+
+
+- (void) addNewRecentPath:(NSString *)path
+{
+	NSString* abbrevPath = [path stringByAbbreviatingWithTildeInPath];
+	
+	// if the path is already in our list, remove it and add it again so its at the top
+	if( [self.recentSaveLocations containsObject:abbrevPath] )
+	{
+		[self.recentSaveLocations removeObject:abbrevPath];
+	}
+	
+	// add the path
+	[self.recentSaveLocations insertObject:abbrevPath atIndex:0];
+	
+	// make sure we're not over the size limit
+	while( [self.recentSaveLocations count] > self.recentSaveLocationsMax )
+	{
+		[self.recentSaveLocations removeLastObject];
+	}
+}
+
+
 #pragma mark Table View Delegate
 
-- (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
+- (BOOL) tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
 {
     return NO;
 }
@@ -175,6 +337,7 @@
 {
 	[flvPathsController removeObjectsAtArrangedObjectIndexes:[flvPathsController selectionIndexes]];
 }
+
 
 #pragma mark Accessors
 // seems like there would be a better way to do this
@@ -226,5 +389,27 @@
 	[[NSUserDefaults standardUserDefaults] setBool:yn forKey:@"shouldOutputXML"];
 }
 
+
+- (NSInteger) outputMode
+{
+	return [[NSUserDefaults standardUserDefaults] integerForKey:@"outputMode"];
+}
+
+
+- (void)setOutputMode:(NSInteger)mode
+{
+	[[NSUserDefaults standardUserDefaults] setInteger:mode forKey:@"outputMode"];
+}
+
+- (NSInteger) outputLocationMenuItemIndex
+{
+	return [[NSUserDefaults standardUserDefaults] integerForKey:@"outputLocationMenuItemIndex"];
+}
+
+
+- (void)setOutputLocationMenuItemIndex:(NSInteger)index
+{
+	[[NSUserDefaults standardUserDefaults] setInteger:index forKey:@"outputLocationMenuItemIndex"];
+}
 
 @end

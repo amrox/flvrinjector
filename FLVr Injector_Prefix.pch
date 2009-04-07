@@ -5,6 +5,8 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
 
+	#import "NSString+AMXExtensions.h"
+
 // This turns on unit test logging so that we can track unittests if we are
 // doing them. See GTMUnitTestDevLog.h for details.
 #define _GTMDevLog _GTMUnittestDevLog
