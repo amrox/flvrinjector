@@ -9,13 +9,21 @@
 #import "AppDelegate.h"
 
 #import "YamdiRunner.h"
+#import "YamdiOperation.h"
 
 
 const int kSaveDestinationSameAsOriginalTag = 100;
 const int kSaveDestinationChooseTag         = 101;
 
-@implementation AppDelegate
+static NSString *kvo_AppDelegate_canRemove = @"kvo_AppDelegate_canRemove";
 
+@interface AppDelegate ()
+@property (assign) BOOL isWorking;
+- (void)updateStatusMessage;
+@end
+
+
+@implementation AppDelegate
 
 //@synthesize shouldUseCreatorTag = _shouldUseCreatorTag;
 //@synthesize creatorTag = _creatorTag;
@@ -25,6 +33,7 @@ const int kSaveDestinationChooseTag         = 101;
 
 @synthesize recentSaveLocations = _recentSaveLocations;
 @synthesize recentSaveLocationsMax = _recentSaveLocationsMax;
+@synthesize isWorking = _isWorking;
 
 + (void)initialize
 {
@@ -36,15 +45,19 @@ const int kSaveDestinationChooseTag         = 101;
 }
 
 
+- (void) dealloc
+{
+	// TODO: release top-level nib objects too I guess
+	[_recentSaveLocations release];
+	[_opQueue release];
+	[super dealloc];
+}
+
+
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
-//	self.shouldUseCreatorTag = NO;
-//	self.creatorTag = @"";
-//	self.shouldAddOnLastSecondEvent = NO;
-//	self.shouldOutputXML = NO;
-//	self.outputMode = kOutputModeInPlace;  // TODO: fix
-	//[saveOptionMatrix setEnabled:NO];
-	
+	_opQueue = [[NSOperationQueue alloc] init];
+	_isWorking = NO;
 }
 
 
@@ -57,12 +70,18 @@ const int kSaveDestinationChooseTag         = 101;
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
+	if( _isWorking )
+		return NO;
+	
 	if( [[[filename pathExtension] lowercaseString] isEqualToString:@"flv"] )
 	{
 		[[self window] makeKeyAndOrderFront:self];
 		[flvPathsController addObject:filename];
+		//[self updateStatusMessage];
+
 		return YES;
 	}
+	
 	return NO;
 }
 
@@ -72,6 +91,8 @@ const int kSaveDestinationChooseTag         = 101;
     [filesTableView registerForDraggedTypes:
 	 [NSArray arrayWithObject:NSFilenamesPboardType]];	
 
+	[self updateStatusMessage];
+	
 	// -- save location stuff
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
 	self.recentSaveLocationsMax = [defaults integerForKey:@"recentSaveLocationsMax"];
@@ -79,8 +100,10 @@ const int kSaveDestinationChooseTag         = 101;
 	[self.recentSaveLocations addObjectsFromArray:[defaults arrayForKey:@"recentSaveLocations"]];
 	[self rebuildChooseSaveLocationMenu];
 	
-//	NSString* lastSavePath = [defaults stringForKey:<#(NSString *)defaultName#>
-	
+	[flvPathsController addObserver:self
+						 forKeyPath:@"canRemove"
+							options:NSKeyValueObservingOptionNew
+							context:&kvo_AppDelegate_canRemove];
 }
 
 
@@ -116,7 +139,18 @@ const int kSaveDestinationChooseTag         = 101;
 
 - (IBAction) inject:(id)sender
 {
+	self.isWorking = YES;
+	[statusMessageLabel setStringValue:NSLocalizedString(@"Working...", nil)]; // TODO: real elipsis
+	[self performSelector:@selector(doInject)
+			   withObject:nil
+			   afterDelay:0.1];
+}
+
+
+- (NSError *) doInject
+{
 	NSError* error = nil;
+	_isWorking = YES;
 	
 	for( NSString* f in flvPathsController.arrangedObjects )
 	{
@@ -170,8 +204,12 @@ const int kSaveDestinationChooseTag         = 101;
 	
 	if( !error )
 	{
+		[_opQueue waitUntilAllOperationsAreFinished];
 		[flvPathsController removeObjects:[flvPathsController arrangedObjects]];
 	}
+	
+	self.isWorking = NO;
+	return error;
 }
 
 
@@ -191,7 +229,10 @@ const int kSaveDestinationChooseTag         = 101;
 	if( xmlPath )
 		runner.xmlOutputPath = xmlPath;
 	
-	error = [runner run];
+	YamdiOperation *op = [[YamdiOperation alloc] initWithYamdiRunner:runner];
+	[_opQueue addOperation:op];
+	[runner release];
+//	error = [runner run];
 	if( error )
 		NSLog( @"error: %@", error );
 	return error;
@@ -336,6 +377,31 @@ const int kSaveDestinationChooseTag         = 101;
 - (void)deleteSelectionFromTableView:(NSTableView *)tableView
 {
 	[flvPathsController removeObjectsAtArrangedObjectIndexes:[flvPathsController selectionIndexes]];
+}
+
+
+- (void)updateStatusMessage
+{
+	if( [[flvPathsController arrangedObjects] count] > 0 )
+	{
+		[statusMessageLabel setStringValue:NSLocalizedString(@"Ready", nil)];	
+	}
+	else
+	{
+		[statusMessageLabel setStringValue:NSLocalizedString(@"No input files", nil)];	
+	}
+}
+
+- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if( context == &kvo_AppDelegate_canRemove )
+	{
+		[self updateStatusMessage];
+	}
+	else
+	{
+		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+	}
 }
 
 

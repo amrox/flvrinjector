@@ -9,7 +9,8 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface YamdiRunner : NSObject {
+@interface YamdiRunner : NSObject
+{
 	NSString* _inputPath;
 	NSString* _outputPath;
 	NSString* _creatorTag;

@@ -10,33 +10,23 @@
 
 @class PreferencesController;
 
-//typedef enum
-//{
-//	kOutputModeInPlace = 0,
-//	kOutputModeNewFile = 1,
-//} OutputMode;
-
 const NSInteger kOutputModeInPlace = 0;
 const NSInteger kOutputModeNewFile = 1;
-
 
 @interface AppDelegate : NSWindowController
 {
 	IBOutlet NSArrayController* flvPathsController;
 	IBOutlet NSTableView* filesTableView;
 	IBOutlet NSPopUpButton* chooseSaveLocationPopupButton;
+	IBOutlet NSTextField* statusMessageLabel;
 
 	IBOutlet PreferencesController* preferencesController;
 	
-//	BOOL _shouldUseCreatorTag;
-//	NSString* _creatorTag;
-//	BOOL _shouldAddOnLastSecondEvent;
-//	BOOL _shouldOutputXML;
-	
-//	OutputMode _outputMode;
-	
 	NSMutableArray* _recentSaveLocations;
 	NSUInteger _recentSaveLocationsMax;
+	
+	NSOperationQueue *_opQueue;
+	BOOL _isWorking;
 }
 
 @property (nonatomic, assign) BOOL shouldUseCreatorTag;
@@ -49,6 +39,8 @@ const NSInteger kOutputModeNewFile = 1;
 
 @property (nonatomic, retain) NSMutableArray* recentSaveLocations;
 @property (nonatomic, assign) NSUInteger recentSaveLocationsMax;
+
+@property (readonly) BOOL isWorking;
 
 - (IBAction) openFLVFiles:(id)sender;
 

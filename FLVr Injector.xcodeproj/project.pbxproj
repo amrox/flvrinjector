@@ -16,6 +16,7 @@
 		A154FC990F7FBC4F002BDE49 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = A154FC980F7FBC4F002BDE49 /* PreferencesController.m */; };
 		A154FCFD0F845F06002BDE49 /* NSString+AMXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A154FCFC0F845F06002BDE49 /* NSString+AMXExtensions.m */; };
 		A154FD020F845FFF002BDE49 /* NSString+AMXExtensions_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A154FD010F845FFF002BDE49 /* NSString+AMXExtensions_Test.m */; };
+		A1CC26B50F8DC1AB009B4506 /* YamdiOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CC26B40F8DC1AB009B4506 /* YamdiOperation.m */; };
 		A1D4A0DF0F79D311008F1EE8 /* yamdi in Copy Bundle Executables */ = {isa = PBXBuildFile; fileRef = A1D4A0DE0F79D311008F1EE8 /* yamdi */; };
 		A1D4A0EC0F79D556008F1EE8 /* GTMScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */; };
 		A1D4A1000F79D6A0008F1EE8 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */; };
@@ -74,6 +75,8 @@
 		A154FCFC0F845F06002BDE49 /* NSString+AMXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AMXExtensions.m"; sourceTree = "<group>"; };
 		A154FD000F845FFF002BDE49 /* NSString+AMXExtensions_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AMXExtensions_Test.h"; sourceTree = "<group>"; };
 		A154FD010F845FFF002BDE49 /* NSString+AMXExtensions_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AMXExtensions_Test.m"; sourceTree = "<group>"; };
+		A1CC26B30F8DC1AB009B4506 /* YamdiOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamdiOperation.h; sourceTree = "<group>"; };
+		A1CC26B40F8DC1AB009B4506 /* YamdiOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamdiOperation.m; sourceTree = "<group>"; };
 		A1D4A0DE0F79D311008F1EE8 /* yamdi */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = yamdi; path = Resources/yamdi; sourceTree = "<group>"; };
 		A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMScriptRunner.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.h"; sourceTree = "<group>"; };
 		A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunner.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.m"; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */,
 				A154FC970F7FBC4F002BDE49 /* PreferencesController.h */,
 				A154FC980F7FBC4F002BDE49 /* PreferencesController.m */,
+				A1CC26B30F8DC1AB009B4506 /* YamdiOperation.h */,
+				A1CC26B40F8DC1AB009B4506 /* YamdiOperation.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 				A154FB9F0F7F38A4002BDE49 /* LTKeyPressTableView.m in Sources */,
 				A154FC990F7FBC4F002BDE49 /* PreferencesController.m in Sources */,
 				A154FCFD0F845F06002BDE49 /* NSString+AMXExtensions.m in Sources */,
+				A1CC26B50F8DC1AB009B4506 /* YamdiOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

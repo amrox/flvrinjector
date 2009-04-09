@@ -25,6 +25,17 @@ NSString *yamdiPath = nil;
 @synthesize xmlOutputPath = _xmlOutputPath;
 @synthesize addOnLastSecondEvent = _addOnLastSecondEvent;
 
+
+- (void) dealloc
+{
+	[_inputPath release];
+	[_outputPath release];
+	[_creatorTag release];
+	[_xmlOutputPath release];
+	[super dealloc];
+}
+
+
 - (NSError *)run
 {
 	NSError* error = nil;
@@ -76,6 +87,7 @@ NSString *yamdiPath = nil;
 											arguments:args];
 	
 	[task waitUntilExit];
+	// TODO: read stderr output
 	
 bail:
 	return error;
