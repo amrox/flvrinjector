@@ -60,14 +60,14 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* FLVr Injector_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLVr Injector_Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* FLVr Injector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FLVr Injector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A154FB9D0F7F38A4002BDE49 /* LTKeyPressTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTKeyPressTableView.h; path = Sources/3rdParty/LTKeyPressTableView/LTKeyPressTableView.h; sourceTree = "<group>"; };
-		A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTKeyPressTableView.m; path = Sources/3rdParty/LTKeyPressTableView/LTKeyPressTableView.m; sourceTree = "<group>"; };
+		A154FB9D0F7F38A4002BDE49 /* LTKeyPressTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTKeyPressTableView.h; sourceTree = "<group>"; };
+		A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTKeyPressTableView.m; sourceTree = "<group>"; };
 		A154FBC50F7F3C25002BDE49 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppDefaults.plist; sourceTree = "<group>"; };
 		A154FC970F7FBC4F002BDE49 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		A154FC980F7FBC4F002BDE49 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
@@ -78,21 +78,21 @@
 		A1CC26B30F8DC1AB009B4506 /* YamdiOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamdiOperation.h; sourceTree = "<group>"; };
 		A1CC26B40F8DC1AB009B4506 /* YamdiOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamdiOperation.m; sourceTree = "<group>"; };
 		A1D4A0DE0F79D311008F1EE8 /* yamdi */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = yamdi; path = Resources/yamdi; sourceTree = "<group>"; };
-		A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMScriptRunner.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.h"; sourceTree = "<group>"; };
-		A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunner.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunner.m"; sourceTree = "<group>"; };
-		A1D4A0EB0F79D556008F1EE8 /* GTMScriptRunnerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunnerTest.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMScriptRunnerTest.m"; sourceTree = "<group>"; };
-		A1D4A0F00F79D592008F1EE8 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/GTMDefines.h"; sourceTree = "<group>"; };
+		A1D4A0E90F79D542008F1EE8 /* GTMScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMScriptRunner.h; path = Foundation/GTMScriptRunner.h; sourceTree = "<group>"; };
+		A1D4A0EA0F79D556008F1EE8 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunner.m; path = Foundation/GTMScriptRunner.m; sourceTree = "<group>"; };
+		A1D4A0EB0F79D556008F1EE8 /* GTMScriptRunnerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMScriptRunnerTest.m; path = Foundation/GTMScriptRunnerTest.m; sourceTree = "<group>"; };
+		A1D4A0F00F79D592008F1EE8 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		A1D4A0F90F79D649008F1EE8 /* FLVr Injector Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FLVr Injector Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D4A0FA0F79D649008F1EE8 /* FLVr Injector Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FLVr Injector Unit Tests-Info.plist"; sourceTree = "<group>"; };
-		A1D4A0FE0F79D69F008F1EE8 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.h"; sourceTree = "<group>"; };
-		A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMSenTestCase.m"; sourceTree = "<group>"; };
-		A1D4A1050F79D6F3008F1EE8 /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMUnitTestDevLog.h"; sourceTree = "<group>"; };
-		A1D4A1060F79D6F3008F1EE8 /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/UnitTesting/GTMUnitTestDevLog.m"; sourceTree = "<group>"; };
-		A1D4A1090F79D74B008F1EE8 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMRegex.h"; sourceTree = "<group>"; };
-		A1D4A10A0F79D74B008F1EE8 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMRegex.m"; sourceTree = "<group>"; };
-		A1D4A10B0F79D74B008F1EE8 /* GTMRegexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegexTest.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/Foundation/GTMRegexTest.m"; sourceTree = "<group>"; };
-		A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMDevLog.m; path = "Sources/3rdParty/google-toolbox-for-mac-1-5-1/DebugUtils/GTMDevLog.m"; sourceTree = "<group>"; };
-		A1D4A2020F79E02C008F1EE8 /* taste_the_fame.flv */ = {isa = PBXFileReference; lastKnownFileType = file; name = taste_the_fame.flv; path = "Sample Data/taste_the_fame.flv"; sourceTree = "<group>"; };
+		A1D4A0FE0F79D69F008F1EE8 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = UnitTesting/GTMSenTestCase.h; sourceTree = "<group>"; };
+		A1D4A0FF0F79D69F008F1EE8 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = UnitTesting/GTMSenTestCase.m; sourceTree = "<group>"; };
+		A1D4A1050F79D6F3008F1EE8 /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = UnitTesting/GTMUnitTestDevLog.h; sourceTree = "<group>"; };
+		A1D4A1060F79D6F3008F1EE8 /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = UnitTesting/GTMUnitTestDevLog.m; sourceTree = "<group>"; };
+		A1D4A1090F79D74B008F1EE8 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = Foundation/GTMRegex.h; sourceTree = "<group>"; };
+		A1D4A10A0F79D74B008F1EE8 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = Foundation/GTMRegex.m; sourceTree = "<group>"; };
+		A1D4A10B0F79D74B008F1EE8 /* GTMRegexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegexTest.m; path = Foundation/GTMRegexTest.m; sourceTree = "<group>"; };
+		A1D4A14C0F79D9E9008F1EE8 /* GTMDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMDevLog.m; path = DebugUtils/GTMDevLog.m; sourceTree = "<group>"; };
+		A1D4A2020F79E02C008F1EE8 /* taste_the_fame.flv */ = {isa = PBXFileReference; lastKnownFileType = file; path = taste_the_fame.flv; sourceTree = "<group>"; };
 		A1D4A2060F79E0BD008F1EE8 /* YamdiRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamdiRunner.h; sourceTree = "<group>"; };
 		A1D4A2070F79E0BD008F1EE8 /* YamdiRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamdiRunner.m; sourceTree = "<group>"; };
 		A1D4A20B0F79E0CE008F1EE8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,14 +127,13 @@
 				A1D4A20C0F79E0CE008F1EE8 /* AppDelegate.m */,
 				A1D4A2060F79E0BD008F1EE8 /* YamdiRunner.h */,
 				A1D4A2070F79E0BD008F1EE8 /* YamdiRunner.m */,
-				A154FB9D0F7F38A4002BDE49 /* LTKeyPressTableView.h */,
-				A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */,
 				A154FC970F7FBC4F002BDE49 /* PreferencesController.h */,
 				A154FC980F7FBC4F002BDE49 /* PreferencesController.m */,
 				A1CC26B30F8DC1AB009B4506 /* YamdiOperation.h */,
 				A1CC26B40F8DC1AB009B4506 /* YamdiOperation.m */,
 			);
 			name = Classes;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
@@ -167,9 +166,9 @@
 		29B97314FDCFA39411CA2CEA /* FLVrInjectr */ = {
 			isa = PBXGroup;
 			children = (
+				A1CC275C0F8DD3D3009B4506 /* 3rdParty */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				A154FCF80F845E69002BDE49 /* Categories */,
-				A1D4A0E40F79D4F0008F1EE8 /* GTM */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				A1D4A2000F79E014008F1EE8 /* Tests */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -217,9 +216,29 @@
 				A154FCFC0F845F06002BDE49 /* NSString+AMXExtensions.m */,
 			);
 			name = Categories;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		A1D4A0E40F79D4F0008F1EE8 /* GTM */ = {
+		A1CC275C0F8DD3D3009B4506 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				A1CC275E0F8DD49B009B4506 /* LTKeyPressTableView */,
+				A1D4A0E40F79D4F0008F1EE8 /* google-toolbox-for-mac-1-5-1 */,
+			);
+			name = 3rdParty;
+			path = Source/3rdParty;
+			sourceTree = "<group>";
+		};
+		A1CC275E0F8DD49B009B4506 /* LTKeyPressTableView */ = {
+			isa = PBXGroup;
+			children = (
+				A154FB9D0F7F38A4002BDE49 /* LTKeyPressTableView.h */,
+				A154FB9E0F7F38A4002BDE49 /* LTKeyPressTableView.m */,
+			);
+			path = LTKeyPressTableView;
+			sourceTree = "<group>";
+		};
+		A1D4A0E40F79D4F0008F1EE8 /* google-toolbox-for-mac-1-5-1 */ = {
 			isa = PBXGroup;
 			children = (
 				A1D4A0F00F79D592008F1EE8 /* GTMDefines.h */,
@@ -227,7 +246,7 @@
 				A1D4A1A40F79DA5A008F1EE8 /* Foundation */,
 				A1D4A1A60F79DA74008F1EE8 /* UnitTesting */,
 			);
-			name = GTM;
+			path = "google-toolbox-for-mac-1-5-1";
 			sourceTree = "<group>";
 		};
 		A1D4A1A40F79DA5A008F1EE8 /* Foundation */ = {
@@ -265,22 +284,23 @@
 		A1D4A2000F79E014008F1EE8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A1D4A2010F79E01D008F1EE8 /* Test Data */,
+				A1D4A2010F79E01D008F1EE8 /* Sample Data */,
 				A1D4A22A0F7B2B1A008F1EE8 /* YamdiRunner_Test.h */,
 				A1D4A22B0F7B2B1A008F1EE8 /* YamdiRunner_Test.m */,
 				A154FD000F845FFF002BDE49 /* NSString+AMXExtensions_Test.h */,
 				A154FD010F845FFF002BDE49 /* NSString+AMXExtensions_Test.m */,
 			);
 			name = Tests;
+			path = Source/Tests;
 			sourceTree = "<group>";
 		};
-		A1D4A2010F79E01D008F1EE8 /* Test Data */ = {
+		A1D4A2010F79E01D008F1EE8 /* Sample Data */ = {
 			isa = PBXGroup;
 			children = (
 				A1D4A2020F79E02C008F1EE8 /* taste_the_fame.flv */,
 			);
-			name = "Test Data";
-			sourceTree = "<group>";
+			path = "Sample Data";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
