@@ -1,0 +1,4 @@
+Updating Bundle Version
+-----------------------
+
+`git tag -a -m "Tagging 1.2.3" 1.2.3`
