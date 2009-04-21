@@ -313,6 +313,7 @@
 				A1D4A0E30F79D350008F1EE8 /* Copy Bundle Executables */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				A12BCA610F9D7A5F00A842C9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -383,6 +384,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A12BCA610F9D7A5F00A842C9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/local/bin/ruby;
+			shellScript = "require 'rubygems'\nbegin\n  require 'Plist'\nrescue LoadError => e\n  puts \"You need to install the 'Plist' gem: [sudo] gem install plist\"\n  exit 1\nend\n\nraise \"Must be run from Xcode\" unless ENV['XCODE_VERSION_ACTUAL']\n\nGIT=\"/opt/local/bin/git\"\nPLIST_FILE = File.join(ENV['BUILT_PRODUCTS_DIR'], ENV['INFOPLIST_PATH'])\nputs \"Info.plist path: #{PLIST_FILE}\"\n\nif File.file?(PLIST_FILE)\n  pl = Plist::parse_xml(PLIST_FILE)\n  if pl\n    pl[\"CFBundleVersion\"] = `#{GIT} describe --tags --always`.to_s\n    pl.save_plist(PLIST_FILE)\n  end\nend";
+		};
 		A1D4A0F70F79D649008F1EE8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
