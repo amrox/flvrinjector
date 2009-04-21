@@ -313,7 +313,7 @@
 				A1D4A0E30F79D350008F1EE8 /* Copy Bundle Executables */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				A12BCA610F9D7A5F00A842C9 /* ShellScript */,
+				A12BCA610F9D7A5F00A842C9 /* Run Bundle Versioning Script */,
 			);
 			buildRules = (
 			);
@@ -384,13 +384,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A12BCA610F9D7A5F00A842C9 /* ShellScript */ = {
+		A12BCA610F9D7A5F00A842C9 /* Run Bundle Versioning Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Bundle Versioning Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
